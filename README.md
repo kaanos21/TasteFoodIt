@@ -2,6 +2,7 @@ Bu proje, Entity Framework ve Code First yaklaşımı kullanılarak tasarlanmı�
 
 Projede Kullanılan Teknolojiler
 
+
 Asp.Net Framework (C#)
 MVC
 SQL
