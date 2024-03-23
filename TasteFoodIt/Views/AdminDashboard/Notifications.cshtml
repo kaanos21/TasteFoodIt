@@ -1,0 +1,23 @@
+﻿@model List<TasteFoodIt.Entities.Notification>
+<div class="col-xl-4 col-lg-5 ">
+    <div class="card">
+        <div class="card-header py-4 bg-primary d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-light">Duyurular</h6>
+        </div>
+        <div>
+            @foreach(var x in Model)
+            {
+            <div class="customer-message align-items-center">
+                <a class="font-weight-bold" href="#">
+                    <div class="text-truncate message-title">
+                        @x.Description
+                    </div>
+                    <div class="small text-gray-500 message-time font-weight-bold">Udin Cilok · 58m</div>
+                </a>
+            </div>
+            }
+            
+        </div>
+    </div>
+</div>
+

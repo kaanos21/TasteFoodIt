@@ -1,0 +1,16 @@
+﻿@model TasteFoodIt.Entities.SocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    @Html.HiddenFor(x=>x.SocialMediaId)
+    <label>Platform ismi</label>
+    @Html.TextBoxFor(x =>x.PlatformName)
+    <label>İkon url</label>
+    @Html.TextBoxFor(x => x.IconUrl)
+    <label>Link</label>
+    @Html.TextBoxFor(x => x.RedirectUrl)
+    <input type="submit" value="Güncelle" class="btn btn-success" />
+</form>

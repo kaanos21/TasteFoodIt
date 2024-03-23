@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.Action("PartialHead", "Default")
+
+        @Html.Action("PartialNavBarInfo", "Default")
+
+        @Html.Action("PartialNavBar", "Default")
+
+
+
+        <h1>Email : taste@gmail.com</h1>
+        <h1>Telefon Numaramız : 05322521478</h1>
+
+
+        @Html.Action("PartialScript", "Default")
+    </div>
+</body>
+</html>

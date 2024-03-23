@@ -1,0 +1,39 @@
+﻿@model List<TasteFoodIt.Entities.Reservation>
+<div class="col-xl-8 col-lg-7 mb-4">
+    <div class="card">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">Invoice</h6>
+            <a class="m-0 float-right btn btn-danger btn-sm" href="#">
+                View More <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+        <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Rezervasyon Id</th>
+                        <th>İsim Soyisim</th>
+                        <th>Telefon Numarası</th>
+                        <th>Rezervasyon Durumu</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var x in Model)
+            {
+                    <tr>
+                        <td><a href="#">@x.ReservationId</a></td>
+                        <td>@x.Name @x.Surname</td>
+                        <td>@x.Phone</td>
+                        <td>@x.ReservationStatus</td>
+                        <td>@x.Email</td>
+                    </tr>
+            }
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer"></div>
+    </div>
+</div>
+

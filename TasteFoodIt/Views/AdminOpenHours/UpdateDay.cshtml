@@ -1,0 +1,16 @@
+﻿@model TasteFoodIt.Entities.OpenDayHour
+@{
+    ViewBag.Title = "UpdateDay";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    @Html.HiddenFor(x=>x.OpenDayHourId)
+    <label>Gün</label>
+    @Html.TextBoxFor(x => x.DayName)
+    <label>Açık saatler</label>
+    @Html.TextBoxFor(x => x.OpenHourRangw)
+    <input type="submit" value="Güncelle" class="btn btn-success" />
+</form>
+
+

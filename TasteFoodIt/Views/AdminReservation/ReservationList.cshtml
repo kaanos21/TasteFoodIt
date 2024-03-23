@@ -1,0 +1,53 @@
+﻿@model List<TasteFoodIt.Entities.Reservation>
+@{
+    ViewBag.Title = "ReservationList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 mb-4">
+        <!-- Simple Tables -->
+        <div class="card">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>İsim</th>
+                            <th>Soyisim</th>
+                            <th>Telefon no</th>
+                            <th>Rezervasyon günü</th>
+                            <th>Kişi sayısı</th>
+                            <th>Email</th>
+                            <th>Durum</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ReservationId</td>
+                                <td>@item.Name</td>                               
+                                <td>@item.Surname</td>
+                                <td>@item.Phone</td>
+                                <td>@item.ReservationDate</td>
+                                <td>@item.GuestCount</td>
+                                <td>@item.Email</td>
+                                <td>@item.ReservationStatus</td>
+                                <td><a href="/AdminReservation/DeleteReservation/@item.ReservationId" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/AdminReservation/UpdateReservation/@item.ReservationId" class="btn btn-success">Güncelle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Category/CreateCategory/" class="btn btn-primary">Yeni Şef</a>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>

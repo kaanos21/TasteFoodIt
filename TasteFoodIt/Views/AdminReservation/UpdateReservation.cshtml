@@ -1,0 +1,36 @@
+﻿@model TasteFoodIt.Entities.Reservation
+@{
+    ViewBag.Title = "UpdateReservation";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<script>
+    function submitForm(action) {
+        var form = document.getElementById('myForm');
+        form.action = action;
+        form.submit();
+    }
+</script>
+
+
+<form id="myForm" method="post">
+    <label>İsim Soyisim</label>
+    @Html.TextBoxFor(x => x.ReservationId)
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Name)
+    <label>Soyadı</label>
+    @Html.TextBoxFor(x => x.Surname)
+    <label>Telefon No</label>
+    @Html.TextBoxFor(x => x.Phone)
+    <label>Tarih</label>
+    @Html.TextBoxFor(x => x.ReservationDate)
+    <label>Saat</label>
+    @Html.TextBoxFor(x => x.Time)
+    <label>Kaç kişisiniz</label>
+    @Html.TextBoxFor(x => x.GuestCount)
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email)
+    <input type="button" onclick="submitForm('/AdminReservation/UpdateReservationConfirm')" value="Onayla" class="btn btn-danger" />
+    <input type="button" onclick="submitForm('/AdminReservation/UpdateReservationCancel')" value="İptal et" class="btn btn-primary" />
+    <input type="button" onclick="submitForm('/AdminReservation/UpdateReservationWait')" value="Beklet" class="btn btn-success" />
+</form>
+

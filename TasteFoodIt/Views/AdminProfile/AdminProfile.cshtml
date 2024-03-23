@@ -1,0 +1,31 @@
+﻿@model List<TasteFoodIt.Entities.Admin>
+@{
+    ViewBag.Title = "AdminProfile";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2 class="text-center mb-4">Admin Profilleri</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fotoğraf</th>
+            <th scope="col">Kullanıcı Adı</th>
+            <th scope="col">Ad Soyad</th>
+            <th scope="col">Şifre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <th scope="row">@x.AdminId</th>
+                <td><img src="@x.ImageUrl" alt="Admin Image" class="img-thumbnail" style="width: 100px; height: 100px;" /></td>
+                <td>@x.Username</td>
+                <td>@x.NameSurname</td>
+                <td>@x.Password</td>
+            </tr>
+        }
+    </tbody>
+</table>

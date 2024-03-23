@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @Html.Action("PartialHead", "Default")
+
+        @Html.Action("PartialNavBarInfo", "Default")
+
+        @Html.Action("PartialNavBar", "Default")
+
+        @Html.Action("PartialMenu", "Default")
+
+        @Html.Action("PartialTestimonial", "Default")
+
+        @Html.Action("PartialChef", "Default")
+
+        @Html.Action("PartialInfo", "Default")
+
+        <h4>Şef sayımız : @ViewBag.sefsayı</h4>
+        <h4>Menü sayımız : @ViewBag.menusayı</h4>
+        <h4>Rezervasyon sayımız : @ViewBag.rezervesayı</h4>
+
+        @Html.Action("PartialScript", "Default")
+    </div>
+</body>
+</html>

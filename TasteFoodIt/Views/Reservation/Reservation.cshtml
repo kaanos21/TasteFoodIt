@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Reservation</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Viewport height */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        @Html.Action("PartialHead", "Default")
+
+        @Html.Action("PartialNavBarInfo", "Default")
+
+        @Html.Action("PartialNavBar", "Default")
+        <div class="center">
+            @Html.Action("PartialReservation", "Default")
+        </div>
+        
+
+        @Html.Action("PartialScript", "Default")
+    </div>
+</body>
+</html>

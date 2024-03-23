@@ -1,0 +1,18 @@
+﻿@model TasteFoodIt.Entities.Slider
+@{
+    ViewBag.Title = "SlideAdd";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+@{
+    string status = "disabled";
+    if (ViewBag.cc <3)
+    { // Burada 0'dan büyük olup olmadığını kontrol ediyoruz
+        status = "";
+    }
+}
+<form method="post">
+    <label>Slide Urlsini giriniz : </label>
+    @Html.TextBoxFor(x => x.SliderImage)
+    <button class="pasif" @status >Ekle</button>
+</form>
+

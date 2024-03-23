@@ -1,0 +1,18 @@
+﻿@model TasteFoodIt.Entities.Chef
+@{
+    ViewBag.Title = "CreateChef";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <label>İsim Soyisim</label>
+    @Html.TextBoxFor(x => x.NameSurname)
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description)
+    <label>Pozisyion</label>
+    @Html.TextBoxFor(x => x.Title)
+    <input type="submit" value="Güncelle" class="btn btn-success" />
+    <label>Fotoğraf Yolu</label>
+    @Html.TextBoxFor(X=>X.ImageUrl)
+</form>
+

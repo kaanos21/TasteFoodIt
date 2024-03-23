@@ -1,0 +1,26 @@
+﻿@model List<TasteFoodIt.Entities.Chef>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Default/Index.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach (var chef in Model)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="@chef.ImageUrl" alt="Chef photo">
+                    <div class="card-body">
+                        <h5 class="card-title">@chef.NameSurname</h5>
+                        <p class="card-text">@chef.Title</p>
+                        <p class="card-text">@chef.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+

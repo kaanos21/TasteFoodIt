@@ -1,0 +1,19 @@
+﻿@model TasteFoodIt.Entities.Testimonial
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    <label>İsim Soyisim</label>
+    @Html.TextBoxFor(x => x.NameSurname)
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x => x.Description)
+    <label>Pozisyion</label>
+    @Html.TextBoxFor(x => x.Title)
+    <label>Fotoğraf</label>
+    @Html.TextBoxFor(x=>x.ImageUrl)
+    <input type="submit" value="Güncelle" class="btn btn-success" />
+</form>
+
+

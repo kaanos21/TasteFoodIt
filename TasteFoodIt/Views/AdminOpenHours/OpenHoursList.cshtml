@@ -1,0 +1,44 @@
+﻿@model List<TasteFoodIt.Entities.OpenDayHour>
+@{
+    ViewBag.Title = "OpenHoursList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-12 mb-4">
+        <!-- Simple Tables -->
+        <div class="card">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+            </div>
+            <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Gün</th>
+                            <th>Açık Saatler</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.OpenDayHourId</td>
+                                <td>@item.DayName</td>
+                                <td>@item.OpenHourRangw</td>
+                                <td><a href="/AdminOpenHours/DeleteDay/@item.OpenDayHourId" class="btn btn-danger">Sil</a></td>
+                                <td><a href="/AdminOpenHours/UpdateDay/@item.OpenDayHourId" class="btn btn-success">Güncelle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Category/CreateCategory/" class="btn btn-primary">Yeni Şef</a>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+﻿@model TasteFoodIt.Entities.Notification
+@{
+    ViewBag.Title = "UpdateNotification";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    @Html.HiddenFor(x=>x.NotificationId)
+    <label>Açıklama</label>
+    @Html.TextBoxFor(x=>x.Description)
+    <label>Okundumu</label>
+    @Html.CheckBoxFor(x=>x.IsRead)
+    <input type="submit" value="Güncelle" class="btn btn-success" />
+</form>
+
+
